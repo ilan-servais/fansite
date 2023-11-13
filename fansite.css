@@ -1,0 +1,63 @@
+/* fansite.css */
+
+body {
+    background-color: #130D07;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Style de la barre de navigation */
+    header {
+        background-color: #302221;
+        padding: 5px 0;
+        display: center;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+}
+
+/* Centrer le texte Nav barre */
+nav ul {
+    list-style-type: none;
+    text-align: center;
+    width: 100%; /* Utilisez toute la largeur disponible */
+    padding: 0;
+}
+
+nav li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+/* Réinitialisation des marges et des rembourrages */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.footer {
+    background-color: #ffffff; /* Couleur de fond de la footer */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px; /* Ajoutez de la marge intérieure au besoin */
+}
+
+
+main {
+    margin-bottom: 100px; /* Ajoutez la hauteur de votre pied de page ici (100px est un exemple) */
+}
+
+.footer {
+    background-color: #302221; /* Couleur de fond de la footer */
+}

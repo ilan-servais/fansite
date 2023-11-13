@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page d'Accueil</title>
+    <link rel="stylesheet" href="fansite.css">
+    <script>
+        window.addEventListener('DOMContentLoaded', function () {
+            const themeSwitch = document.getElementById('theme-switch');
+            const body = document.querySelector('body');
+
+            themeSwitch.addEventListener('change', function () {
+                body.classList.toggle('dark-mode');
+            });
+        });
+    </script>
+    <style>
+
+body {
+  color: #f1f1f1;
+  margin: 0;
+  font-family: "Times New Roman", serif; /* Police de texte */
+}
+
+/* Style pour les écrans */
+.team-member {
+    text-align: center;
+    max-width: 150px; /* Ajustez la largeur selon vos besoins */
+    min-width: 200px; /* Ajout de la largeur minimale */
+    margin: 10px;
+    padding: 10px;
+}
+
+/* Style pour les grands écrans */
+@media screen and (min-width: 1200px) {
+    .team-members {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-gap: 20px;
+        justify-items: center;
+    }
+
+    .team-member {
+        text-align: center;
+        max-width: 150px; /* Ajustez la largeur selon vos besoins */
+    }
+}
+
+/* Style pour les écrans moyens */
+@media screen and (max-width: 1199px) {
+    .team-members {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .team-member {
+        text-align: center;
+        width: 30%; /* Ajustez la largeur selon vos besoins */
+        margin: 10px;
+    }
+}
+
+/* Style pour les petits écrans */
+@media screen and (max-width: 768px) {
+    .team-members {
+        grid-template-columns: repeat(1, 1fr); /* Change à une colonne pour les écrans de 768px ou moins */
+    }
+
+    .team-member img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+/* team-member img */
+.team-member img {
+    width: 150px; /* Taille de l'image */
+    height: 150px; /* Hauteur de l'image */
+    object-fit: cover; /* Évite la déformation de l'image */
+    border: 5px solid #130D07; /* Cadre de 5 pixels de couleur #333 */
+    border-radius: 50%; /* Coins arrondis pour un effet circulaire */
+}
+
+.member1 {
+    background-color: #302221; /* Couleur d'arrière-plan pour le membre 1 (Or) */
+}
+
+.member2 {
+    background-color: #302221; /* Couleur d'arrière-plan pour le membre 2 */
+}
+.member3 {
+    background-color: #302221; /* Couleur d'arrière-plan pour le membre 1  */
+}
+
+
+
+/* Space evenly member staff */
+.team-members {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* Utilisez "repeat(6, 1fr)" pour 6 colonnes égales */
+    grid-gap: 20px; /* Espacement entre les membres de l'équipe */
+    justify-items: center; /* Centre les éléments horizontalement */
+    justify-content: space-evenly; /* Espace équitablement les éléments horizontalement */
+    margin: 0 auto; /* Centre le contenu par rapport aux bords de la page */
+    max-width: 1200px; /* Limite la largeur de la section à 1200px */
+    padding: 0 20px; /* Ajoute un peu d'espacement sur les côtés de la section */
+}
+
+/* Réinitialisation des marges et des rembourrages */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Style du titre */
+h1 {
+    text-align: center;
+    font-size: 2em;
+    margin: 20px 0;
+    color: #fb8b23;
+}
+
+/* Style de la description  */
+p {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Styles pour les images */
+.container img {
+    width: 200px;
+    height: 145px;
+    object-fit: cover; /* Évite que l'image ne se déforme */
+    display: block;
+    margin: 0 auto; /* Centre l'image dans son conteneur */
+}
+
+/* images positions flex */
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+
+  /* Styles texte team description */
+.team-description-box {
+    background-color: #130D07; /* Couleur de fond de la boîte */
+    padding: 10px; /* Espacement intérieur de la boîte */
+    border: 5px solid #302221; /* Bordure de 5 pixels de couleur #2cac12 */
+    border-radius: 10px; /* Coins arrondis */
+    max-width: 600px; /* Largeur maximale de la boîte */
+    margin: 0 auto 20px; /* Espacement autour de la boîte */
+}
+.team-description-box p {
+    font-family: "Times New Roman", serif; /* Police de texte */
+    font-size: 20px; /* Taille de police */
+    line-height: 1.6; /* Espacement entre les lignes */
+}
+
+.team-members {
+  color: #ffffff; /* Couleur du texte */
+}
+/* image */
+.image-section {
+    text-align: center;
+    margin: 0 auto;
+  }
+
+/* Fenêtre liens */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #302221;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* vidéo s'ajuste correctement */
+
+.team-description-box iframe {
+    width: 100%;
+}
+
+
+    </style> 
+</head>
+<body>
+    <header>
+        <!-- navigation -->
+        <nav>
+            <ul>
+                <li><a href="actualite.html">Actualité</a></li>
+                <li><a href="wallpapers.html">Wallpapers</a></li>
+                <li><a href="https://worldofwarcraft.blizzard.com/fr-fr/news" target="_blank">Événements</a></li>
+                <li class="dropdown">
+                    <a href="#liens">Liens utiles</a>
+                    <div class="dropdown-content">
+                        <a href="https://www.judgehype.com/" target="_blank">Judgehype</a>
+                        <a href="https://www.mamytwink.com/"target="_blank">Mamytwink</a>
+                    </div>
+                </li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>    
+    </header>
+
+    <main>
+    <section id="liens">
+
+        <div class="main-content">
+
+        <!-- Titre de la page -->
+        <h1>L'ACTU BRÛLANTE !!!</h1>
+        
+            <!-- top title -->
+            <div class="team-description-box">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/6N3kjHebBKA" frameborder="0" allowfullscreen></iframe>
+          </div>
+          
+        <!--  -->
+    <section class="team-members flex-container">
+          <!-- Membres de l'équipe -->
+    <div class="team-member member1">
+        <img src="https://drive.google.com/uc?id=16NjccQNN8XoUdgklJsUlyyoHYQUCYUQd" alt="Membre de l'équipe 1">
+        <p><a href="https://warcraftrumble.blizzard.com/fr-fr/" target="_blank">Warcraft Rumble enfin chez nous !</a></p>
+        <p>Warcraft® Rumble™ est un jeu d’action et de stratégie sur mobile dans l’univers de Warcraft, où des figurines à collectionner s’animent pour s’affronter dans des escarmouches frénétiques. Jouez dans plusieurs modes, dont une campagne solo, des batailles JcJ épiques, et plus encore. Découvrez ce qu’est véritablement un joyeux chaos !</p>
+    </div>
+
+    <div class="team-member member2">
+        <img src="https://drive.google.com/uc?id=1BStY9N0tCdW8du4pyxLN4Le5ehmUPYSe" alt="Membre de l'équipe 1">
+        <p><a href="https://wowclassic.blizzard.com/fr-fr/" target="_blank">Cataclysm CLASSIC</a></p>
+        <p>Une nouvelle ère cataclysmique™</p>
+        <p>Une nouvelle ère cataclysmique™ Vous avez renversé les armées de morts-vivants du roi-liche et mis fin au règne d’Arthas. Et maintenant Aile de mort, le briseur de mondes émerge du cœur du Maelström et déchaîne sa rage. Toutes les âmes brûleront sous l’ombre de ses ailes.</p>
+    </div>
+
+    <div class="team-member member2">
+        <img src="https://drive.google.com/uc?id=1rv2nNXubcNc_anefrEISa9dpNosQF8um" alt="Membre de l'équipe 1">
+        <p><a href="https://thewarwithin.blizzard.com/fr-fr/" target="_blank">Annonce de World of Warcraft®: The War Within™ !</a></p>
+        <p>World Soul Saga™</p>
+        <p>Explorez des mondes souterrains inédits, regorgeant de merveilles cachées et de dangers, et enfoncez-vous jusqu’aux sombres profondeurs de l’empire nérubien, où la sinistre messagère du Vide rassemble des forces arachnides pour réduire Azeroth à néant.</p>
+    </div>
+        <!-- Ajoutez plus de membres au besoin -->
+    </section>
+
+</main>
+
+<!-- footer -->
+<div class="footer">
+    <footer>
+    <div>
+        <a href="https://www.instagram.com/warcraft/" target="_blank">
+        <img src="https://img.icons8.com/?size=48&id=Xy10Jcu1L2Su&format=png" alt="Instagram">
+        </a>
+    
+        <a href="https://www.facebook.com/Warcraft/?brand_redir=184466263718&locale=fr_FR" target="_blank">
+        <img src="https://img.icons8.com/?size=48&id=yGcWL8copNNQ&format=png" alt="Facebook">
+        </a>
+    
+        <a href="https://www.worldofwarcraft.com" target="_blank">
+        <img src="https://img.icons8.com/?size=48&id=SmZQEPEk3iZP&format=png" alt="World of Warcraft">
+        </a>
+    
+        <span>&copy; 2023 World of Warcraft Fansite</span>
+    </div>
+</footer>
+        
+    <script>
+        var modal = document.getElementById("myModal");
+        var btn = document.querySelector("nav ul li a[href='#liens']");
+        var span = document.getElementsByClassName("close")[0];
+
+        btn.onmouseover = function () {
+            modal.style.display = "block";
+        }
+
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

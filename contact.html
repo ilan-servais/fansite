@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>World of Warcraft Fansite</title>
+    <link rel="stylesheet" href="fansite.css">
+    <script>
+        window.addEventListener('DOMContentLoaded', function () {
+            const themeSwitch = document.getElementById('theme-switch');
+            const body = document.querySelector('body');
+
+            themeSwitch.addEventListener('change', function () {
+                body.classList.toggle('dark-mode');
+            });
+        });
+    </script>
+    <style>
+        
+body {
+    color: #FFFFFF;
+    background-color: #0E0E17;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    font-family: "Times New Roman", serif; /* Police de texte */
+
+}
+
+        /* Styles spécifiques à la page de contact */
+h1 {
+    text-align: center;
+    font-size: 2em;
+    margin: 20px 0;
+}
+
+.contact-form {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-form form {
+    text-align: left;
+}
+
+.contact-form label,
+.contact-form textarea,
+.contact-form input[type="email"] {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+}
+
+.contact-form textarea {
+    height: 150px;
+}
+
+.contact-form input[type="submit"] {
+    background-color: #172C47;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+  /* Styles texte Contactez-nous */
+.contactez-nous-box {
+    background-color: #172C47; /* Couleur de fond de la boîte */
+    padding: 10px; /* Espacement intérieur de la boîte */
+    border: 5px solid #00D1FF; /* Bordure de 5 pixels de couleur #2cac12 */
+    border-radius: 10px; /* Coins arrondis */
+    max-width: 600px; /* Largeur maximale de la boîte */
+    margin: 0 auto 20px; /* Espacement autour de la boîte */
+}
+.contactez-nous-box p {
+    font-family: "Times New Roman", serif; /* Police de texte */
+    font-size: 20px; /* Taille de police */
+    line-height: 1.6; /* Espacement entre les lignes */
+    color: #FFFFFF; /* Couleur du texte */
+}
+
+/* Fenêtre liens */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #302221;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <section id="liens">
+        <!-- Header logo et navigation -->
+        <nav>
+            <ul>
+                <li><a href="actualite.html">Actualité</a></li>
+                <li><a href="wallpapers.html">Wallpapers</a></li>
+                <li><a href="https://worldofwarcraft.blizzard.com/fr-fr/news" target="_blank">Événements</a></li>
+                <li class="dropdown">
+                    <a href="#liens">Liens utiles</a>
+                    <div class="dropdown-content">
+                        <a href="https://www.judgehype.com/" target="_blank">Judgehype</a>
+                        <a href="https://www.mamytwink.com/"target="_blank">Mamytwink</a>
+                    </div>
+                </li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+
+    <main>
+        <div class="main-content">
+        
+            <!-- Titre de la page -->
+            <h1>Contactez-nous</h1>
+                <!-- Contact -->
+                <div class="contactez-nous-box">
+                    <p><p>Nous apprécions énormément vos commentaires et suggestions. Votre opinion compte beaucoup pour nous et nous aide à améliorer nos services. Si vous avez des idées, des questions ou des commentaires à partager, n'hésitez pas à nous contacter. Nous sommes impatients de vous entendre !</p></p>
+                </div>
+
+            <!-- Formulaire de contact -->
+            <section class="contact-form">
+                <form action="traitement.php" method="post">
+                    <label for="civilite">Civilité :</label>
+                        <select id="civilite" name="civilite">
+                            <option value="Monsieur">Monsieur</option>
+                            <option value="Madame">Madame</option>
+                            <option value="Autre">Autre</option>
+                        </select><br><br>                
+                            <label for="nom">Nom :</label>
+                            <input type="text" id="nom" name="nom"><br><br>
+                            
+                            <label for="prenom">Prénom :</label>
+                            <input type="text" id="prenom" name="prenom"><br><br>
+                            
+                            <label for="adresse">Adresse postale :</label>
+                            <input type="text" id="adresse" name="adresse"><br><br>
+                        
+                            <label for="politique">Accepter les politiques de confidentialité :</label>
+                            <input type="checkbox" id="politique" name="politique" value="accepte"><br><br>
+                            
+                            <label for="message">Message :</label><br>
+                        <textarea id="message" name="message" required></textarea><br>
+                    <input type="submit" value="Envoyer">
+                </form>
+            </section>
+        </div>
+
+    </main>
+    
+    <!-- footer -->
+    <div class="footer">
+        <footer>
+            <div>
+                <a href="https://www.instagram.com/warcraft/" target="_blank">
+                <img src="https://img.icons8.com/?size=48&id=Xy10Jcu1L2Su&format=png" alt="Instagram">
+                </a>
+            
+                <a href="https://www.facebook.com/Warcraft/?brand_redir=184466263718&locale=fr_FR" target="_blank">
+                <img src="https://img.icons8.com/?size=48&id=yGcWL8copNNQ&format=png" alt="Facebook">
+                </a>
+            
+                <a href="https://www.worldofwarcraft.com" target="_blank">
+                <img src="https://img.icons8.com/?size=48&id=SmZQEPEk3iZP&format=png" alt="World of Warcraft">
+                </a>
+            
+                <span>&copy; 2023 World of Warcraft Fansite</span>
+            </div>
+        </footer> 
+
+        <script>
+            var modal = document.getElementById("myModal");
+            var btn = document.querySelector("nav ul li a[href='#liens']");
+            var span = document.getElementsByClassName("close")[0];
+    
+            btn.onmouseover = function () {
+                modal.style.display = "block";
+            }
+    
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+    
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        </script>        
+</body>
+</html>
